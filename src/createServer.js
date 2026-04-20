@@ -12,9 +12,9 @@ const createServer = () => {
   app.use(express.json());
   app.use(cors());
 
-  app.use('/users', express.json(), usersRouter);
-  app.use('/expenses', express.json(), expensesRouter);
-  app.use('/categories', express.json(), categoriesRouter);
+  app.use('/users', usersRouter);
+  app.use('/expenses', expensesRouter);
+  app.use('/categories', categoriesRouter);
 
   return app;
 };
